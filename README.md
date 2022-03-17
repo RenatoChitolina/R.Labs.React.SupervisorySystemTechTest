@@ -18,3 +18,5 @@ Please refer to the provided document for the code challenge requirements.
 
 - When an invalid sensor id is passed to the backend, currently it is returning 404. So it would be good to create a component to handle the unsuccessful request and show it on the screen accordingly.
 - Currently, a request to the backend is made to get a list of all available sensor ids and then N more requests (one per available sensor id) are made each 5 seconds to retrieve the current temperature and status for each sensor. An alternative could be to create a request to retrieve data from more than only one sensor at a time, getting a greater bulk of information, but this is always a subject of a deeper analysis, that should consider threshold and scalability.
+- All variable settings (eg.: Backend endpoint) would need to be put into a config file.
+- All error handling would need to be enhanced.
