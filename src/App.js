@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import SensorList from './components/SensorList';
+import SensorList from './components/SensorList/SensorList';
 import { sensorProvider } from './services/sensorProvider';
 
 function App() {

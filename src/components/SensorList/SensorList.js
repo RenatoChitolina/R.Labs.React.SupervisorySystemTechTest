@@ -1,18 +1,18 @@
-import Sensor from "./Sensor/Sensor";
+import Sensor from "../Sensor/Sensor";
 
 function SensorList({ sensors }) {
   return (
     <table>
         <thead>
             <tr>
-            <th align="left">Product (Min - Max)</th>
-            <th align="right">Temperature</th>
-            <th align="center">Status</th>
+              <th align="left">Product (Min - Max)</th>
+              <th align="right">Temperature</th>
+              <th align="center">Status</th>
             </tr>
         </thead>
         <tbody>
             {Object.keys(sensors).map(sensorKey => (
-                <Sensor sensor={sensors[sensorKey]}></Sensor>
+                <Sensor key={sensorKey} sensor={sensors[sensorKey]}></Sensor>
             ))}
         </tbody>
     </table>
