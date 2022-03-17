@@ -1,3 +1,5 @@
+import Sensor from "./Sensor/Sensor";
+
 function SensorList({ sensors }) {
   return (
     <table>
@@ -10,11 +12,7 @@ function SensorList({ sensors }) {
         </thead>
         <tbody>
             {Object.keys(sensors).map(sensorKey => (
-            <tr key={sensors[sensorKey].id}>
-                <td align="left" width={200}>{sensors[sensorKey].name} ({sensors[sensorKey].minimumTemperature} - {sensors[sensorKey].maximumTemperature})</td>
-                <td align="right" width={200}>{sensors[sensorKey].temperature}</td>
-                <td align="center" width={200}>{sensors[sensorKey].status}</td>
-            </tr>
+                <Sensor sensor={sensors[sensorKey]}></Sensor>
             ))}
         </tbody>
     </table>
