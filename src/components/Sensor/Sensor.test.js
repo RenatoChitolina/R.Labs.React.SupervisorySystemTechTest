@@ -18,7 +18,7 @@ describe('Sensor', () => {
                     <Sensor sensor={sensorData}/>
                 </tbody>
             </table>
-        )
+        );
         
         expect(component.getByText(sensorData.name, {exact: false})).toBeInTheDocument();
         expect(component.getByText(sensorData.status)).toBeInTheDocument();
